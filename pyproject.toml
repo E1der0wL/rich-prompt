@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptgen"
+version = "0.2.0"
+description = "Compile YAML/JSON prompt themes to Bash, tcsh, Zsh and PowerShell"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6.0"]
+unicode = ["wcwidth>=0.2.13", "regex>=2024.5.15"]
+all = ["PyYAML>=6.0", "wcwidth>=0.2.13", "regex>=2024.5.15"]
+
+[project.scripts]
+promptgen = "promptgen:main"
+
+[tool.setuptools]
+py-modules = ["promptgen"]

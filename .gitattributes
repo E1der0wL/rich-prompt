@@ -1,0 +1,2 @@
+# Shell sources and configuration must keep Unix line endings on every platform.
+* text=auto eol=lf

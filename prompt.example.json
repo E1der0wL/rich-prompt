@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "segments": [
+    {
+      "prefix": "",
+      "suffix": "",
+      "content": {
+        "eval": {
+          "bash": "\\\\t",
+          "tcsh": "%T",
+          "zsh": "%*",
+          "pwsh": "$(Get-Date -Format HH:mm:ss)"
+        }
+      },
+      "fg": "255,255,255",
+      "bg": "45,90,160",
+      "effects": [
+        "bold"
+      ]
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "connect": "previous",
+      "content": {
+        "eval": {
+          "bash": "\\\\u@\\\\h",
+          "tcsh": "%n@%m",
+          "zsh": "%n@%m",
+          "pwsh": "$([Environment]::UserName)@$([Environment]::MachineName)"
+        }
+      },
+      "fg": "255,255,255",
+      "bg": "70,130,190"
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "connect": "previous",
+      "content": {
+        "eval": {
+          "bash": "\\\\w",
+          "tcsh": "%~",
+          "zsh": "%~",
+          "pwsh": "$($executionContext.SessionState.Path.CurrentLocation)"
+        }
+      },
+      "fg": "255,255,255",
+      "bg": "40,120,100"
+    },
+    {
+      "prefix": "",
+      "suffix": "",
+      "connect": "previous",
+      "content": {
+        "text": " PROMPT "
+      },
+      "width": 14,
+      "fg": "255,255,255 - 220,255,240",
+      "bg": "40,120,100 - 80,190,140"
+    },
+    "newline",
+    {
+      "content": {
+        "text": "❯ "
+      },
+      "fg": "100,220,150",
+      "effects": [
+        "bold"
+      ]
+    }
+  ]
+}
